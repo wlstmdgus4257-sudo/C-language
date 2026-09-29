@@ -1,25 +1,23 @@
 #include <stdio.h>
-#include <stdarg.h>
 
-int sum(int num, ...){
-    va_list args;
-    int total = 0;
+int main() {
+    int num[10];
+    int count[7] = {0};
 
-    va_start(args, num);
-    
-    for (int i = 0; i < num; i++) {
-        total += va_arg(args, int);        
+    // 10개의 숫자 입력
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &num[i]);
     }
 
-    va_end(args);
+    // 숫자별 개수 세기
+    for (int i = 0; i < 10; i++) {
+        count[num[i]]++;
+    }
 
-    return total;
-}
-
-int main(){
-    printf("매개변수 3, 2+3+4=%d\n", sum(3, 2,3,4));
-    printf("매개변수 2, 5+6=%d\n", sum(2, 5,6));
-    printf("매개변수 10, 1+2+3+4+5+6+7+8+9+10=%d\n", sum(10, 1,2,3,4,5,6,7,8,9,10));
+    // 결과 출력
+    for (int i = 1; i <= 6; i++) {
+        printf("%d : %d\n", i, count[i]);
+    }
 
     return 0;
 }
