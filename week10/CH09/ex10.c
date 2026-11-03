@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int arr[3][5] = {
+        {5, 8, 10, 6, 4},
+        {11, 20, 1, 13, 2},
+        {7, 9, 14, 22, 3}
+    };
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 5; j++) {
+            cout << setw(2) << arr[i][j];
+
+            if (j < 4) {
+                cout << "   ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
