@@ -1,0 +1,60 @@
+1번. 문자열과 널 문자
+
+다음 코드에서 배열 str의 크기(sizeof(str))는 몇 바이트인가? (char는 1바이트로 가정한다.)
+
+char str[] = "Hi";
+
+
+① 1바이트
+② 2바이트
+③ 3바이트
+④ 4바이트
+
+2번. 문자 입출력 함수
+C언어의 getchar() 함수에 대한 설명으로 옳은 것은?
+
+① 문자열 전체를 출력한다.
+② 표준 입력에서 문자 하나를 읽는다.
+③ 표준 출력으로 문자 하나를 출력한다.
+④ 문자열의 길이를 계산한다.
+
+3번. 문자열 연결
+다음 프로그램을 실행했을 때 출력되는 내용은?
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char str[20] = "C";
+    strcat(str, "Lang");
+    printf("%s", str);
+    return 0;
+}
+
+① C Lang
+② Lang
+③ C
+④ CLang
+
+4번. 구조체 포인터
+다음 코드를 실행한 뒤 포인터 p를 이용해 구조체 멤버 score에 접근하는 올바른 표현은?
+struct Student {
+    int score;
+};
+
+struct Student s = {90};
+struct Student *p = &s;
+
+
+① p->score
+② p.score
+③ *p.score
+④ p-score
+
+5번. 공용체(union)
+C언어의 공용체에 대한 설명으로 옳은 것은?
+
+① 멤버마다 서로 다른 독립된 메모리 공간을 사용한다.
+② 모든 멤버의 값을 동시에 독립적으로 보관할 수 있다.
+③ 모든 멤버가 동일한 메모리 공간을 공유한다.
+④ char 자료형만 멤버로 선언할 수 있다.
